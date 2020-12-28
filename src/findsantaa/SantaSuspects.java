@@ -7,11 +7,13 @@ public class SantaSuspects {
 	int nextIndex = 0;
 	int arraySize = 0;
 	
+	//constructor initializing the size of an [] suspects
 	public SantaSuspects(int size) {
 		this.arraySize = size;
 		this.suspects = new String[size];
 	}
 	
+	//method to add suspect in the [] suspects
 	public void addSuspect(String suspect) {
 		this.suspects[this.nextIndex] = suspect;
 		this.nextIndex++;
@@ -20,6 +22,7 @@ public class SantaSuspects {
 		}
 	}
 	
+	// method to print suspects from the Array list
 	public void printSuspects() {
 		for (int i = 0; i < this.suspects.length; i++) {
 			if (null == this.suspects[i]) {
@@ -29,6 +32,10 @@ public class SantaSuspects {
 		}
 	}
 	
+	// boolean method to scan through array and check if requested suspect exist in the array
+	// return boolean value : true/false
+	//return true if suspect exist 
+	//return false if suspect doesn't exist
 	public boolean foundMatch(String input) {
 		for (int i = 0; i < this.suspects.length; i++) {
 			if (null == this.suspects[i]) {
