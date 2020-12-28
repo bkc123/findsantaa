@@ -28,7 +28,7 @@ public class SantaSuspects {
 			if (null == this.suspects[i]) {
 				continue;
 			}
-			System.out.println(this.suspects[i]);
+			System.out.println(i+1 + ". " + this.suspects[i]);
 		}
 	}
 	

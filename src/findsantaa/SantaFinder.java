@@ -24,6 +24,13 @@ public static void main(String[] args) {
 		santaSuspects.addSuspect("big@show.com");
 		santaSuspects.addSuspect("boug@dimmadome.com");
 		
+		
+		System.out.println("\n****************************************\n" + 
+		" Displaying all suspects in the List\n");
+		// Display all suspects in the List
+		santaSuspects.printSuspects();
+		System.out.println("\n****************************************\n");
+		
 		//Display message requesting user for input
 		System.out.println("Provide a name to search for:");
 		// create Scanner object
@@ -34,9 +41,9 @@ public static void main(String[] args) {
 		
 		boolean foundMatch = santaSuspects.foundMatch(searchFor);
 		if (foundMatch) {
-			System.out.println(searchFor + " is indeed a santa suspect");
+			System.out.println("Yes, "+ searchFor + " is indeed a santa suspect.");
 		} else {
-			System.out.println(searchFor + " is not a santa suspect");
+			System.out.println("No, " + searchFor + " is not a santa suspect.");
 		}
 		
 	}
